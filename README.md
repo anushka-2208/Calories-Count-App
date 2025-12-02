@@ -23,7 +23,7 @@ An AI-powered health assistant that can estimate the **calories in your meal** b
 - Python 3.10+
 
 ---
-
+Linkedin post: https://www.linkedin.com/posts/anushka-sharma-srm_geminihealthapp-caloriecounter-ai-activity-7172125669575831552-xYSM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADdgC2UBC_FJQg3tiGusbwfgYAQoF-s2Qhk
 ## 📦 Installation & Setup
 
 ### 1. Clone the Repository
