@@ -14,7 +14,20 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_repsonse(input,image,prompt):
     model=genai.GenerativeModel('gemini-pro-vision')
-    response=model.generate_content([input,image[0],prompt])
+    # response=model.generate_content([input,image[0],prompt])
+    response = model.generate_content(
+    [
+        {
+            "role": "user",
+            "parts": [
+                {"text": input},
+                image[0],        # your image part
+                {"text": prompt}
+            ]
+        }
+    ]
+)
+
     return response.text
 
 def input_image_setup(uploaded_file):
@@ -80,5 +93,6 @@ if submit:
 
 linkedin_url = "http://www.linkedin.com/in/anushka-sharma-srm"  # Replace with your LinkedIn profile URL
 st.markdown(f"Connect with me on [LinkedIn]({linkedin_url}) for feedback and collaboration.")
+
 
 st.markdown("Anushka Sharma")
